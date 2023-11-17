@@ -1,0 +1,748 @@
+﻿@model ProjectServiceEZATU.Models.generate.GenerateModels
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width-device-width, initail-scale-1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Layout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+          integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+
+        {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url("https://firebasestorage.googleapis.com/v0/b/nimstest-debb0.appspot.com/o/Res2.png?alt=media&token=382bc7a1-fd33-4c1b-9d9a-7ae3639fbeaa");
+            background-size: cover;
+            width: 2480 px;
+            height: 3508 px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .cuttext {
+            text-decoration: none;
+            text-overflow: ellipsis; /* เพิ่ม ... จุดจุดจุดท้ายสุด */
+            display: block;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 255px; /* กำหนดความกว้าง */
+            word-wrap: break-word;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        .container {
+            width: 960px;
+            margin: 0 auto;
+            /*background: #0094ff;*/
+        }
+
+        header {
+            width: 880px;
+            height: 150px;
+            /* background: #ffd800;*/
+            margin: 0 auto;
+        }
+
+        section {
+            margin-left: 0px;
+            margin-top: 0px;
+            text-align: left;
+            width: 350px;
+            height: 700px;
+            float: left;
+            /*background: #ffd800; */
+        }
+
+        aside {
+            margin-left: 40px;
+            margin-top: 0px;
+            margin-right: 50px;
+            width: 305px;
+            height: 1403px;
+            text-align: left;
+            /*background: #ffd800;*/
+            float: left;
+        }
+
+        img {
+            margin-left: 22px;
+            position: center;
+        }
+
+        .profileText {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+            .profileText .imgBx {
+                position: relative;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+
+                .profileText .imgBx img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+            .profileText h2 {
+                color: #fff;
+                font-size: 1.5em;
+                margin-top: 20px;
+                text-transform: uppercase;
+                text-align: center;
+                font-weight: 600;
+                line-height: 1.4em;
+            }
+
+                .profileText h2 span {
+                    font-size: 0.8em;
+                    font-weight: 300;
+                }
+
+        .contactinfo {
+            padding-top: 40px;
+        }
+
+        .title {
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .contactinfo ul {
+            position: relative;
+        }
+
+            .contactinfo ul li {
+                position: relative;
+                list-style: none;
+                margin: 10px 0;
+                cursor: pointer;
+            }
+
+                .contactinfo ul li .icon {
+                    display: inline-block;
+                    width: 30px;
+                    font-size: 18px;
+                    color: #03a9f4;
+                }
+
+                .contactinfo ul li span {
+                    color: #fff;
+                    font-weight: 300;
+                }
+
+        .contactinfo.education li {
+            margin-bottom: 15px;
+        }
+
+        .contactinfo.education h5 {
+            color: #03a9f4;
+            font-weight: 500;
+        }
+
+        .contactinfo.education h4:nth-child(2) {
+            color: #fff;
+            font-weight: 300;
+        }
+
+        .contactinfo.education h4 {
+            color: #fff;
+            font-weight: 300;
+        }
+
+        .contactinfo.languate .percent {
+            position: relative;
+            width: 100%;
+            height: 6px;
+            background: #081921;
+            display: block;
+            margin-top: 5px;
+        }
+
+            .contactinfo.languate .percent div {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                background: #03a9f4;
+            }
+
+        .contactinfo.skill .percent {
+            position: relative;
+            width: 100%;
+            height: 6px;
+            background: #081921;
+            display: block;
+            margin-top: 5px;
+        }
+
+            .contactinfo.skill .percent div {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                background: #03a9f4;
+            }
+
+        .container .rigth_side {
+            position: relative;
+            background: #fff;
+            padding: 40px;
+        }
+
+        .about {
+            margin-bottom: 50px;
+            margin-right: 0px;
+        }
+
+            .about:last-child {
+                margin-bottom: 0;
+            }
+
+        .title2 {
+            color: #003147;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #333;
+        }
+
+        .about .p1 {
+            color: #333;
+            width: 600px;
+            word-wrap: break-word;
+            padding: 5px;
+        }
+
+        .about .box {
+            display: -webkit-box;
+            display: flex;
+            flex-direction: row;
+            margin: 20px 0;
+        }
+
+            .about .box .year_company {
+                min-width: 150px;
+            }
+
+                .about .box .year_company h5 {
+                    text-transform: uppercase;
+                    color: #848c90;
+                    font-weight: 600;
+                    width: 150px;
+                    word-wrap: break-word;
+                    padding: 5px;
+                }
+
+            .about .box .text h4 {
+                text-transform: uppercase;
+                color: #2a7da2;
+                font-size: 16px;
+            }
+
+            .about .box .text p {
+                color: #333;
+                font-size: 16px;
+                width: 400px;
+                word-wrap: break-word;
+                padding: 5px;
+            }
+
+        .skill .box {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 105px 1fr;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .skill .box h4 {
+                text-transform: uppercase;
+                color: #848c99;
+                font-weight: 500;
+            }
+
+            .skill .box .percent {
+                position: relative;
+                width: 100%;
+                height: 10px;
+                background: #f0f0f0;
+            }
+
+                .skill .box .percent div {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    background: #03a9f4;
+                }
+
+        .interest ul {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+        }
+
+            .interest ul li {
+                list-style: none;
+                color: #333;
+                font-weight: 500;
+                margin: 10px 0;
+            }
+
+        interest ul li .fa {
+            color: #03a9f4;
+            font-size: 18px;
+            width: 20px;
+        }
+
+        .about .box .year_company {
+            margin-bottom: 5px;
+        }
+
+        .interest ul {
+            grid-template-columns: repeat(1,1fr);
+        }
+
+        .skill .box {
+            grid-template-columns: repeat(1,1fr);
+        }
+
+        nav {
+            float: left;
+            width: 30%;
+            height: 300px; /* only for demonstration, should be removed */
+            padding: 20px;
+        }
+
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        td {
+            padding: 20px;
+        }
+
+
+        h3 {
+            color: black;
+            font-size: 1em;
+            margin-top: 20px;
+            text-align: left;
+            font-weight: 600;
+            line-height: 1.4em;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 85%;
+            background-color: #f1f1f1;
+            height: 1000px;
+        }
+
+        article2 {
+            float: left;
+            padding: 20px;
+            width: 85%;
+            background-color: lightcoral;
+            height: 1000px;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 1.5em;
+            margin-top: 20px;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 600;
+            line-height: 1.4em;
+        }
+
+        .title5 {
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .name {
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        h7 {
+            color: #fff;
+            font-size: 1.3em;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section>
+            <br></br>
+            <img src="data:image/jpeg;base64,@Model.image" position="center" alt="alternatetext" style="width:305px;height:365px;">
+            <hr color=#003147 width=80%>
+            <h2 class="name" position="center">@Model.name&nbsp;@Model.lastname</h2>
+            <hr width="200" coler="fff"></hr>
+            <h2 class="title5">@Model.textaddress</h2>
+            <li><h7>@Model.texthouse @Model.number   @Model.textmoo @Model.moo</h7></li>
+            <li><h7>@Model.textsoi @Model.soi   @Model.textroad @Model.road</h7></li>
+            <li><h7>@Model.textsub @Model.subdistrict</h7></li>
+            <li><h7>@Model.textdis @Model.district</h7></li>
+            <li><h7>@Model.textpro @Model.province</h7></li>
+            <li><h7>@Model.textzip @Model.zipcode</h7></li>
+            <br></br>
+            <h2 class="title5">@Model.textcontact</h2>
+            @if (Model.email != "")
+            {
+                <li>
+                    <h7>
+                        <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                        @Model.email
+                    </h7>
+                </li>
+            }
+            @if (Model.facebook != "")
+            {
+                <li>
+                    <h7>
+                        <span class="icon"><i class="fa fa-facebook-square" aria-hidden="true"></i></span>
+                        @Model.facebook
+                    </h7>
+                </li>
+            }
+
+            @if (Model.instagram != "")
+            {
+                <li>
+                    <h7>
+                        <span class="icon"><i class="fa fa-instagram" aria-hidden="true"></i></span>
+                        @Model.instagram
+                    </h7>
+                </li>
+            }
+            @if (Model.phone != "")
+            {
+                <li>
+                    <h7>
+                        <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                        @Model.phone
+                    </h7>
+                </li>
+            }
+            @if ((Model.skill != null && Model.skilldetail != null && Model.skillvalue != null)
+            || (Model.skill2 != null && Model.skilldetail2 != null && Model.skillvalue2 != null)
+            || (Model.skill3 != null && Model.skilldetail3 != null && Model.skillvalue3 != null))
+            {
+                <div class="contactinfo skill">
+                    <h2 class="title5">@Model.textskill</h2>
+                    @if (Model.skill != null && Model.skilldetail != null && Model.skillvalue != null)
+                    {
+                        <li>
+                            <h7>@Model.skill - @Model.skillvalue%</h7>
+                            <span class="percent">
+                                <div style="width:@Model.skillvalue%"></div>
+                            </span>
+                        </li>
+                    }
+                    else
+                    { }
+                    @if (Model.skill2 != null && Model.skilldetail2 != null && Model.skillvalue2 != null)
+                    {
+                        <li>
+                            <h7>@Model.skill2 - @Model.skillvalue2%</h7>
+                            <span class="percent">
+                                <div style="width:@Model.skillvalue2%"></div>
+                            </span>
+                        </li>
+                    }
+                    else
+                    { }
+                    @if (Model.skill3 != null && Model.skilldetail3 != null && Model.skillvalue3 != null)
+                    {
+                        <li>
+                            <h7>@Model.skill3 - @Model.skillvalue3%</h7>
+                            <span class="percent">
+                                <div style="width:@Model.skillvalue3%"></div>
+                            </span>
+                        </li>
+                    }
+                    else
+                    { }
+
+                </div>
+            }
+            else
+            { }
+            @if ((Model.language != null && Model.languagevalue != null) 
+            || (Model.language2 != null && Model.languagevalue2 != null) 
+            || (Model.language3 != null && Model.languagevalue3 != null))
+            {
+                <div class="contactinfo languate">
+                    <h2 class="title">@Model.textlanguage</h2>
+                    @if (Model.language != null && Model.languagevalue != null)
+                    {
+                        <li>
+                            <h7>@Model.language - @Model.languagevalue%</h7>
+                            <span class="percent">
+                                <div style="width:@Model.languagevalue%"></div>
+                            </span>
+                        </li>
+                    }
+                    else
+                    { }
+                    @if (Model.language2 != null && Model.languagevalue2 != null)
+                    {
+                        <li>
+                            <h7>@Model.language2 - @Model.languagevalue2%</h7>
+                            <span class="percent">
+                                <div style="width:@Model.languagevalue2%"></div>
+                            </span>
+                        </li>
+                    }
+                    else
+                    { }
+                    @if (Model.language3 != null && Model.languagevalue3 != null)
+                    {
+                        <li>
+                            <h7>@Model.language3 - @Model.languagevalue3%</h7>
+                            <span class="percent">
+                                <div style="width:@Model.languagevalue3%"></div>
+                            </span>
+                        </li>
+                    }
+                    else
+                    { }
+                </div>
+            }
+            else
+            { }
+            <br></br>
+            <h2 class="title5">@Model.textatten</h2>
+            <ul>
+                @if (Model.positionoffice != null || Model.positionoffice != "")
+                {
+                    <li><h7>- @Model.positionoffice</h7></li>
+                }
+                else
+                {
+                }
+
+            </ul>
+
+        </section>
+        <aside>
+            <br></br>
+            <div class="about">
+                <h2 class="title2">@Model.textabout</h2>
+                <p><p1>@Model.aboutme</p1></p>
+                <h2 class="title2">@Model.texteducation</h2>
+                @if (@Model.educationhscstart != null | @Model.educationhscend != null | @Model.educationhscplace != null | @Model.educationhscdetail != null)
+                {
+                    <div class="box">
+                        <div class="year_company">
+                            <h5>@Model.educationhscstart - @Model.educationhscend</h5>
+                        </div>
+                        <div class="text">
+                            <h4>@Model.texthsc</h4>
+                            <p>
+                                @Model.educationhscplace
+                                <br>@Model.educationhscdetail
+                            </p>
+                        </div>
+                    </div>
+                }
+                else
+                {
+
+                }
+                @if (@Model.educationbdstart != "" | @Model.educationbdend != "" | @Model.educationbdplace != "" | @Model.educationbddetail != "")
+                {
+                    <div class="box">
+                        <div class="year_company">
+                            <h5>@Model.educationbdstart - @Model.educationbdend</h5>
+                        </div>
+                        <div class="text">
+                            <h4>@Model.textbd</h4>
+                            <p>
+                                @Model.educationbdplace
+                                <br>@Model.educationbddetail
+                            </p>
+                        </div>
+                    </div>
+                }
+                else
+                {
+
+                }
+                @if (@Model.educationmdstart != null && @Model.educationmdend != null && @Model.educationmdplace != null && @Model.educationmddetail != null)
+                {
+                    <div class="box">
+                        <div class="year_company">
+                            <h5>@Model.educationmdstart - @Model.educationmdend</h5>
+                        </div>
+                        <div class="text">
+                            <h4>@Model.textmd</h4>
+                            <p>
+                                @Model.educationmdplace
+                                <br>@Model.educationmddetail
+                            </p>
+                        </div>
+                    </div>
+                }
+                else
+                {
+
+                }
+                @if (@Model.educationddstart != null && @Model.educationddend != null && @Model.educationddplace != null && @Model.educationdddetail != null)
+                {
+                    <div class="box">
+                        <div class="year_company">
+                            <h5>@Model.educationddstart - @Model.educationddend</h5>
+                        </div>
+                        <div class="text">
+                            <h4>@Model.textdd</h4>
+                            <p>
+                                @Model.educationddplace
+                                <br>@Model.educationdddetail
+                            </p>
+                        </div>
+                    </div>
+                }
+                else
+                {
+
+                }
+                @if (@Model.educationhddstart != null && @Model.educationhddend != null && @Model.educationhddplace != null && @Model.educationhdddetail != null)
+                {
+                    <div class="box">
+                        <div class="year_company">
+                            <h5>@Model.educationhddstart - @Model.educationhddend</h5>
+                        </div>
+                        <div class="text">
+                            <h4>@Model.texthdd</h4>
+                            <p>
+                                @Model.educationhddplace
+                                <br>@Model.educationhdddetail
+                            </p>
+                        </div>
+                    </div>
+                }
+                else
+                {
+
+                }
+            </div>
+            @if ((Model.startdateoffice != null && @Model.enddateoffice != null && Model.positionexperience != null && Model.experiencedetail != null)
+                || (Model.startdateoffice2 != null && @Model.enddateoffice2 != null && Model.positionexperience2 != null && Model.experiencedetail2 != null)
+                || (Model.startdateoffice3 != null && @Model.enddateoffice3 != null && Model.positionexperience3 != null && Model.experiencedetail3 != null))
+            {
+                <div class="about">
+                    <h2 class="title2">@Model.textexperience</h2>
+
+                    @if (Model.startdateoffice != null && @Model.enddateoffice != null && Model.positionexperience != null && Model.experiencedetail != null)
+                    {
+                        <div class="box">
+                            <div class="year_company">
+                                <h5>@Model.startdateoffice - @Model.enddateoffice</h5>
+                            </div>
+                            <div class="text">
+                                <h4>@Model.positionexperience</h4>
+                                <p>@Model.experiencedetail</p>
+                            </div>
+
+                        </div>
+                    }
+                    else
+                    {
+
+                    }
+                    @if (Model.startdateoffice2 != null && @Model.enddateoffice2 != null && Model.positionexperience2 != null && Model.experiencedetail2 != null)
+                    {
+                        <div class="box">
+                            <div class="year_company">
+                                <h5>@Model.startdateoffice2 - @Model.enddateoffice2</h5>
+                            </div>
+                            <div class="text">
+                                <h4>@Model.positionexperience2</h4>
+                                <p>@Model.experiencedetail2</p>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+
+                    }
+                    @if (Model.startdateoffice3 != null && @Model.enddateoffice3 != null && Model.positionexperience3 != null && Model.experiencedetail3 != null)
+                    {
+                        <div class="box">
+                            <div class="year_company">
+                                <h5>@Model.startdateoffice3 - @Model.enddateoffice3</h5>
+                            </div>
+                            <div class="text">
+                                <h4>@Model.positionexperience3</h4>
+                                <p>@Model.experiencedetail3</p>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+
+                    }
+                </div>
+            }
+            else
+            {
+
+            }
+        </aside>
+    </div>
+</body>
+</html>

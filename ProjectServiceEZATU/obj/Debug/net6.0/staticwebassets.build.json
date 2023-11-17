@@ -1,0 +1,50 @@
+{
+  "Version": 1,
+  "Hash": "Gg/EqG+eXS4GIDGQZVYA60X0CBMW1htgsI2zp/aJq/E=",
+  "Source": "ProjectServiceEZATU",
+  "BasePath": "_content/ProjectServiceEZATU",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\ACER\\Desktop\\New folder\\ProjectServiceEZATU\\obj\\Debug\\net6.0\\scopedcss\\bundle\\ProjectServiceEZATU.styles.css",
+      "SourceId": "ProjectServiceEZATU",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\ACER\\Desktop\\New folder\\ProjectServiceEZATU\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "BasePath": "_content/ProjectServiceEZATU",
+      "RelativePath": "ProjectServiceEZATU.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\ACER\\Desktop\\New folder\\ProjectServiceEZATU\\obj\\Debug\\net6.0\\scopedcss\\bundle\\ProjectServiceEZATU.styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\ACER\\Desktop\\New folder\\ProjectServiceEZATU\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ProjectServiceEZATU.bundle.scp.css",
+      "SourceId": "ProjectServiceEZATU",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\ACER\\Desktop\\New folder\\ProjectServiceEZATU\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/ProjectServiceEZATU",
+      "RelativePath": "ProjectServiceEZATU.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\ACER\\Desktop\\New folder\\ProjectServiceEZATU\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ProjectServiceEZATU.bundle.scp.css"
+    }
+  ]
+}

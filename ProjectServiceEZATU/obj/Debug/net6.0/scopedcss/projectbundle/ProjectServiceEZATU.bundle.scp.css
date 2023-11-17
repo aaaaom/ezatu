@@ -1,0 +1,39 @@
+/* _content/ProjectServiceEZATU/Views/Resumepage/Resume.cshtml.rz.scp.css */
+
+
+*[b-gy5dnevq21] {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body[b-gy5dnevq21] {
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container[b-gy5dnevq21] {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    background: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0 35px 55px rgba(0,0,0,0.1)
+}
+
+    .container .left_Side[b-gy5dnevq21] {
+        position: relative;
+        background: #003147;
+        padding: 40px
+    }
+
+    .container .right_Side[b-gy5dnevq21] {
+        position: relative;
+        background: #ffffff;
+        padding: 40px
+    }

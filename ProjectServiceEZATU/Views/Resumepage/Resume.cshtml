@@ -1,0 +1,706 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Resume A4 Example By CHIN</title>
+
+    <!-- Normalize or reset CSS with your favorite library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+
+    <!-- Load paper.css for happy printing -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.css"> -->
+    <!-- Set page size here: A5, A4 or A3 -->
+    <!-- Set also "landscape" if you need -->
+    <style>
+        @@page {
+            size: A4
+        }
+
+        @@page {
+            margin: 0
+        }
+
+        body {
+            margin: 0
+        }
+
+        .sheet {
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+            box-sizing: border-box;
+            page-break-after: always;
+        }
+
+        /** Paper sizes **/
+        body.A3 .sheet {
+            width: 297mm;
+            height: 419mm
+        }
+
+        body.A3.landscape .sheet {
+            width: 420mm;
+            height: 296mm
+        }
+
+        body.A4 .sheet {
+            width: 210mm;
+            height: 296mm
+        }
+
+        body.A4.landscape .sheet {
+            width: 297mm;
+            height: 209mm
+        }
+
+        body.A5 .sheet {
+            width: 148mm;
+            height: 209mm
+        }
+
+        body.A5.landscape .sheet {
+            width: 210mm;
+            height: 147mm
+        }
+
+        body.letter .sheet {
+            width: 216mm;
+            height: 279mm
+        }
+
+        body.letter.landscape .sheet {
+            width: 280mm;
+            height: 215mm
+        }
+
+        body.legal .sheet {
+            width: 216mm;
+            height: 356mm
+        }
+
+        body.legal.landscape .sheet {
+            width: 357mm;
+            height: 215mm
+        }
+
+        /** Padding area **/
+        .sheet.padding-10mm {
+            padding: 10mm
+        }
+
+        .sheet.padding-15mm {
+            padding: 15mm
+        }
+
+        .sheet.padding-20mm {
+            padding: 20mm
+        }
+
+        .sheet.padding-25mm {
+            padding: 25mm
+        }
+
+        /** For screen preview **/
+        @@media screen {
+            body {
+                /*background-image: url('https://webzbinaryz.web.app/assets/Resume_bule_1.png'); }*/
+                .sheet
+
+        {
+            /*background-image: url('https://webzbinaryz.web.app/assets/Resume_bule_1.png');*/
+
+            background-size: 210mm;
+            box-shadow: 0 .5mm 2mm rgba(0,0,0,.3);
+            margin: 5mm auto;
+        }
+
+        }
+
+        /** Fix for Chrome issue #273306 **/
+        @@media print {
+            body.A3.landscape {
+                width: 420mm
+            }
+
+            body.A3, body.A4.landscape {
+                width: 297mm
+            }
+
+            body.A4, body.A5.landscape {
+                width: 210mm
+            }
+
+            body.A5 {
+                width: 148mm
+            }
+
+            body.letter, body.legal {
+                width: 216mm
+            }
+
+                body.letter.landscape {
+                    width: 280mm
+                }
+
+                body.legal.landscape {
+                    width: 357mm
+                }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url('https://webzbinaryz.web.app/assets/Resume_bule_1.png');
+        }
+
+        h5 {
+            /* background-color: rgb(255, 233, 233); */
+            padding: 0px;
+            text-align: left;
+            font-size: 12px;
+            color: rgb(0, 0, 0);
+        }
+
+        header {
+            background-color: rgb(211, 211, 211);
+            padding: 1px;
+            text-align: center;
+            font-size: 15px;
+            color: rgb(31, 24, 39);
+            height: 3%;
+        }
+
+        .headerLeft {
+            background-color: rgb(211, 211, 211);
+            padding-top: 2px;
+            padding-right: 1px;
+            padding-bottom: 1px;
+            padding-left: 20px;
+            text-align: left;
+            font-size: 10px;
+            color: rgb(31, 24, 39);
+            height: 4%;
+        }
+
+        .header1 {
+            background-color: rgb(255, 233, 233);
+            padding: t;
+            text-align: center;
+            font-size: 15px;
+            color: rgb(44, 0, 241);
+        }
+
+        .header1 {
+            background-color: rgb(255, 233, 233);
+            padding: 1px;
+            text-align: center;
+            font-size: 15px;
+            color: rgb(44, 0, 241);
+        }
+
+        .picture1 {
+            width: 90%;
+            height: 20;
+            border: 2px solid rgb(0, 0, 0);
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .box img {
+            width: 80%;
+            /*height: 80%;*/
+        }
+
+        .box1 img {
+            object-fit: cover;
+        }
+
+        .box2 img {
+            object-fit: contain;
+        }
+
+        .box3 img {
+            object-fit: fill;
+        }
+
+        .boxGradient {
+            width: 250px;
+            border-radius: 500px 500px 0 0;
+            background:
+            /* a linear gradient to control the progress. Adjust the angle from 0deg to 180deg*/
+            linear-gradient(160deg, transparent 50%, #fff 0) top/100% 200%,
+            /* a radial gradient to show only a part of the gradient (20px here)*/
+            radial-gradient(farthest-side at bottom, #fff calc(100% - 20px), transparent 0),
+            /* the main gradient */
+            linear-gradient(to right, green, yellow, red);
+        }
+
+            .boxGradient::before {
+                content: "";
+                display: block;
+                padding-top: 50%;
+            }
+
+        nav {
+            float: left;
+            width: 15%;
+            height: 650px;
+            background: #ccc;
+            padding: 20px;
+        }
+
+        .nav1 {
+            float: left;
+            width: 30%;
+            height: 1150px;
+            /* background: #ccc; */
+            padding: 20px;
+        }
+
+        .nav2 {
+            float: left;
+            width: 15%;
+            height: 1150px;
+            background: #ccc;
+            padding: 20px;
+        }
+
+        .nav3 {
+            float: left;
+            width: 15%;
+            height: 3600px;
+            background: #ccc;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 85%;
+            background-color: #f1f1f1;
+            height: 1000px;
+        }
+
+        .article1 {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            /* background-color: #f1f1f1; */
+            height: 93%;
+        }
+
+        .article2 {
+            float: left;
+            padding: 20px;
+            width: 75%;
+            background-color: #f1f1f1;
+            height: 650px;
+        }
+
+        .article3 {
+            float: left;
+            padding: 20px;
+            width: 85%;
+            background-color: #f1f1f1;
+            height: 3600px;
+        }
+
+
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+
+        @@media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .item1 {
+            grid-area: header;
+        }
+
+        .item2 {
+            grid-area: menu;
+        }
+
+        .item3 {
+            grid-area: main;
+        }
+
+        .item4 {
+            grid-area: right;
+        }
+
+        .item5 {
+            grid-area: footer;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'main main  right ';
+            grid-gap: 10px;
+            background-color: #ffedf9;
+            padding: 10px;
+        }
+
+        div h1 {
+            color: #3333FF;
+        }
+
+        div hr {
+            size: 5;
+            color: #00CC00
+        }
+
+        .gallery {
+            padding: 1px;
+            text-align: center;
+            font-size: 15px;
+            color: rgb(0, 0, 0);
+        }
+
+        .contactresume {
+            padding: 1px;
+            text-align: left;
+            font-size: 15px;
+            color: rgb(0, 0, 0);
+        }
+
+        .desc {
+            text-align: center;
+        }
+
+        .desc1 {
+            text-align: left;
+        }
+
+        progress,
+        .progress-bar {
+            float: left;
+            width: 0;
+            height: 100%;
+            font-size: 12px;
+            line-height: 20px;
+            color: #fff;
+            text-align: center;
+            background-color: #337ab7;
+            -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+            box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+            -webkit-transition: width .6s ease;
+            -o-transition: width .6s ease;
+            transition: width .6s ease
+        }
+
+        @@-o-keyframes progress-bar-stripes {
+            from {
+                background-position: 40px 0
+            }
+
+            to {
+                background-position: 0 0
+            }
+        }
+
+        @@keyframes progress-bar-stripes {
+            from {
+                background-position: 40px 0
+            }
+
+            to {
+                background-position: 0 0
+            }
+        }
+
+        .progress {
+            height: 10px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1)
+        }
+
+        .progress-bar {
+            float: left;
+            width: 0;
+            height: 100%;
+            font-size: 12px;
+            line-height: 20px;
+            color: #fff;
+            text-align: center;
+            background-color: #337ab7;
+            -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+            box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+            -webkit-transition: width .6s ease;
+            -o-transition: width .6s ease;
+            transition: width .6s ease
+        }
+
+        .progress-bar-striped,
+        .progress-striped .progress-bar {
+            background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+            background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+            background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+            -webkit-background-size: 40px 40px;
+            background-size: 40px 40px
+        }
+
+        .progress-bar.active,
+        .progress.active .progress-bar {
+            -webkit-animation: progress-bar-stripes 2s linear infinite;
+            -o-animation: progress-bar-stripes 2s linear infinite;
+            animation: progress-bar-stripes 2s linear infinite
+        }
+
+        .progress-bar-success {
+            background-color: #5cb85c
+        }
+
+        .progress-striped .progress-bar-success {
+            background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+            background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+            background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent)
+        }
+
+        .progress-bar-info {
+            background-color: #5bc0de
+        }
+
+        .progress-striped .progress-bar-info {
+            background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+            background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+            background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent)
+        }
+
+        .progress-bar-warning {
+            background-color: #f0ad4e
+        }
+
+        .progress-striped .progress-bar-warning {
+            background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+            background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+            background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent)
+        }
+
+        .progress-bar-danger {
+            background-color: #d9534f
+        }
+
+        .progress-striped .progress-bar-danger {
+            background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+            background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+            background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent)
+        }
+
+    </style>
+</head>
+
+<!-- Set "A5", "A4" or "A3" for class name -->
+<!-- Set also "landscape" if you need -->
+
+<body class="A3.landscape" , background-image=https://webzbinaryz.web.app/assets/Resume_bule_1.png;>
+
+    <!-- Each sheet element should have the class "sheet" -->
+    <!-- "padding-**mm" is optional: you can set 10, 15, 20 or 25 -->
+
+
+    <section class="sheet padding-0mm">
+        <!-- <header>
+          <h2>สิทธิพล ชินโน</h2>
+        </header>
+        <header class="headerLeft">
+          <h2>ตำแหน่งที่สนใจ : Flutter developer</h2>
+        </header> -->
+        <div class="nav1">
+            <!-- <p> Picture</p> -->
+            <div class="wrapper">
+                <!-- <div class="box box1"><img src="https://webzbinaryz.web.app/assets/276029.jpg" alt="a balloon"></div> -->
+                <div class="box box2"><img src="https://webzbinaryz.web.app/assets/276029.jpg" alt="a balloon"></div>
+                <!-- <div class="box box3"><img src="https://webzbinaryz.web.app/assets/276029.jpg" alt="a balloon"></div> -->
+            </div>
+            <h4 align="center"> ช่องทางการติดต่อ</h4>
+            <p class="contactresume">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png"
+                     alt="a balloon" width=10%>
+                : resume@go.buu.ac.th
+            </p>
+            <p class="contactresume">
+                <img src="https://webzbinaryz.web.app/assets/phone_icon.png" alt="phone" width=10%>
+                : 087-654-3210
+            </p>
+
+            <p class="contactresume">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png"
+                     alt="phone" width=10%>
+                : name_facebook
+            </p>
+
+            <p class="contactresume">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png"
+                     alt="phone" width=10%>
+                : name_IG
+            </p>
+            <p class="contactresume">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png"
+                     alt="phone" width=10%>
+                : name_Youtube
+            </p>
+            <p class="contactresume">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png"
+                     alt="phone" width=10%>
+                : name_Website
+            </p>
+            <p class="contactresume">
+                <img src="https://png.pngtree.com/png-vector/20190223/ourmid/pngtree-vector-house-icon-png-image_695369.jpg"
+                     alt="phone" width=10%>
+                : 169 บ้านแสนสุข ...
+            </p>
+            <!-- <div class="boxGradient"></div> -->
+
+            <h4> ทักษะความทางภาษา</h4>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-offset-3 col-md-6">
+                        <h5 class="progress-title">ภาษาไทย - 80%</h5>
+                        <div class="progress red">
+                            <div class="progress-bar" style="width: 80%;  background-color:#13D73E;">
+                            </div>
+                        </div>
+
+                        <h5 class="progress-title">ภาษาอังกฤษ - 50%</h5>
+                        <div class="progress blue">
+                            <div class="progress-bar" style="width:50%;  background-color:#F0C808;">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Write HTML just like a web page -->
+        <div class="article1">
+            <h2>สิทธิพล ชินโน</h2>
+
+            <h2>ตำแหน่งที่สนใจ : Flutter developer</h2>
+            <h4> เกี่ยวกับฉัน</h4>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                สิ่งที่ใช้สมัครงานวัตถุประสงค์ของ RESUME คือสิ่งที่ต้องทำคือปล่อยให้ตัวบุคคลทำงานร่วมกันเพื่อให้ RESUME
+                ของเอกสารสำคัญซึ่งนำไปใช้งาน
+                วัตถุประสงค์ของ RESUME คือสิ่งที่ต้องทำคือปล่อยให้ตัวบุคคลทำงานร่วมกันเพื่อให้ RESUME
+                ตอบสนองเอกสารสำคัญในการนำไปใช้
+                บอกเล่าตัวเองเพื่อตำแหน่งงานที่ต้องการในตัวเองเพื่อพนักงานตำแหน่งงานที่ต้องการ
+            </p>
+
+            <h4> การศึกษา</h4>
+            <ul>
+                <li>&nbsp;ระดับปริญญาตรี</li>
+                <table>
+                    <tr>
+                        <td>2562-2566 </td>
+                        <td>: มหาวิทยาลัยบูรพา คณะวิทยาศาสตร์ สาขาคณิตศาสตร์</td>
+                    <tr>
+                        <td>เกรดเฉลี่ย</td>
+                        <td>: 3.76</td>
+                </table>
+                <li>&nbsp;ระดับประกาศนียบัตรมัธยมศึกษาตอนปลาย</li>
+                <table>
+                    <tr>
+                        <td>2559-2562 </td>
+                        <td>: โรงเรียนคำแสนวิทยาสรรค์ สายวิทย์-คณิตศาสตร์</td>
+                    <tr>
+                        <td>เกรดเฉลี่ย</td>
+                        <td>: 3.85</td>
+                </table>
+            </ul>
+            <h4> ประสบการณ์ในการทำงาน</h4>
+            <ul>
+                <table>
+                    <tr>
+                        <td>
+                <li>2565-ปัจจุบัน</li>
+                </td>
+                <td>: Software engineer ( Flutter mobile developer )</td>
+                <tr>
+                    <td></td>
+                    <td>: บริษัท ฟรีวิลล์โซลูชั่นส์ จำกัด </td>
+                    </table>
+            </ul>
+            <h4> ทักษะความสามารถ</h4>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-offset-3 col-md-6">
+                        <h5 class="progress-title">Flutter Framework - 80%</h5>
+                        <div class="progress red">
+                            <div class="progress-bar" style="width: 80%;  background-color:#13D73E;">
+                            </div>
+                        </div>
+
+                        <h class="progress-title">Dart Language - 80%</h>
+                        <div class="progress green">
+                            <div class="progress-bar" style="width: 80%;  background-color:#13D73E;">
+                            </div>
+                        </div>
+
+                        <h5 class="progress-title">C# Language - 50%</h5>
+                        <div class="progress blue">
+                            <div class="progress-bar" style="width:50%;  background-color:#F0C808;">
+                            </div>
+                        </div>
+
+
+                        <h5 class="progress-title">HTML - 70%</h5>
+                        <div class="progress yellow">
+                            <div class="progress-bar" style="width:70%; background-color:#0D47A1;">
+                            </div>
+                        </div>
+
+                        <h5 class="progress-title">CSS - 70%</h5>
+                        <div class="progress yellow">
+                            <div class="progress-bar" style="width:70%; background-color:#0D47A1;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            </p>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
